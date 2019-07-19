@@ -29,6 +29,8 @@ public class FinalEnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene("You Win", LoadSceneMode.Single);
+            GameObject.Find("WinSound").GetComponent<AudioSource>().Play();
+
         } else if(finalenemyCurrentHealth <= 0 && playerHealth.playerCurrentHealth > 99)
         {
             Destroy(gameObject);
