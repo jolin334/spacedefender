@@ -16,7 +16,7 @@ public class FinalEnemyHealth : MonoBehaviour
     void Start()
     {
         finalenemyCurrentHealth = finalenemyMaxHealth;
-        healthText.text = "Health: " + finalenemyCurrentHealth;
+        healthText.text = "Enemy Health: " + finalenemyCurrentHealth;
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
 
     }
@@ -24,7 +24,7 @@ public class FinalEnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health: " + finalenemyCurrentHealth;
+        healthText.text = "Enemy Health: " + finalenemyCurrentHealth;
         if (finalenemyCurrentHealth <= 0 && playerHealth.playerCurrentHealth <100)
         {
             Destroy(gameObject);

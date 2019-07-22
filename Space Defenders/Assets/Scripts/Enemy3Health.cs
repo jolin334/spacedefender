@@ -15,14 +15,14 @@ public class Enemy3Health : MonoBehaviour
     void Start()
     {
         enemy3CurrentHealth = enemy3MaxHealth;
-        healthText.text = "Health: " + enemy3CurrentHealth;
+        healthText.text = "Enemy Health: " + enemy3CurrentHealth;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health: " + enemy3CurrentHealth;
+        healthText.text = "Enemy Health: " + enemy3CurrentHealth;
         if (enemy3CurrentHealth <= 0)
         {
             Destroy(gameObject);

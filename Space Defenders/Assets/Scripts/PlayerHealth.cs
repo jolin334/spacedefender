@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         playerCurrentHealth = playerMaxHealth;
 
-        healthText.text = "Health: " + playerCurrentHealth;
+        healthText.text = "Player Health: " + playerCurrentHealth;
         anim = GetComponent<Animator>();
          
     }
@@ -25,13 +25,13 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health: " + playerCurrentHealth;
+        healthText.text = "Player Health: " + playerCurrentHealth;
         if (playerCurrentHealth < 1)
         {
             playSound(zero);
             zero++;
             anim.SetBool("isExplode", true);
-            StartCoroutine(waitToDie());
+            StartCoroutine(WaitToDie());
         }
     }
 
@@ -54,11 +54,11 @@ public void SetMaxHealth()
     playerCurrentHealth = playerMaxHealth;
 }
 
-IEnumerator waitToDie()
-{
-    yield return new WaitForSeconds(1.5f);
-    gameObject.SetActive(false);
-    SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
-}
+IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
+        SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+    }
 
 }
