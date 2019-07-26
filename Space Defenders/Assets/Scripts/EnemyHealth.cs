@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth;
-        healthText.text = "Health: " + enemyCurrentHealth;
+        healthText.text = "Enemy Health: " + enemyCurrentHealth;
 
     }
 

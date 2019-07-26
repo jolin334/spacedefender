@@ -24,8 +24,10 @@ public class FinalEnemyGun : MonoBehaviour
     {
         timer6++;
         timer5++;
+
         if (timer5 == 50)
         {
+            Debug.Log("In here ");
             GameObject.Find("ShootSound").GetComponent<AudioSource>().Play();
             finalEnemyBulletPosition = transform.position;
             Instantiate(finalEnemyBullet, finalEnemyBulletPosition, Quaternion.identity);
